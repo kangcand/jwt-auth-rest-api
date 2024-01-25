@@ -15,9 +15,6 @@
     "env": {
         "NODE_ENV": "production"
     },
-    "functions": {
-        "api/**/*.js": {}
-    },
     "scripts": {
         "build": "npm install",
         "start": "npx nodemon index.js",

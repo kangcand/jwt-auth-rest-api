@@ -1,10 +1,12 @@
 const conf = {};
+require("dotenv").config()
+
 conf.environment = 'development';
 conf.sequelize = {};
-conf.sequelize.username = 'root'; //database username
-conf.sequelize.password = ''; //database password kosongkan jika tidak pakai password
-conf.sequelize.database = 'eny'; //isi dengan nama database
-conf.sequelize.host = '127.0.0.1';
+conf.sequelize.username = process.env.DB_USERNAME;
+conf.sequelize.password = process.env.DB_PASSWORD;
+conf.sequelize.database = process.env.DB_NAME;
+conf.sequelize.host = process.env.DB_HOST;
 conf.sequelize.dialect = 'mysql';
 conf.sequelize.port = 3306;
 conf.sequelize.define = {

@@ -38,7 +38,7 @@ const login = async (req, res) => {
                 email: fetchResult.email
             }
             jwt.sign({ userToken }, process.env.JWT_KEY, {
-                expiresIn: '30s' //set exipre token
+                expiresIn: '1d' //set exipre token
             }, (err, token) => {
                 res.json({ token: token }).status(200)
             });

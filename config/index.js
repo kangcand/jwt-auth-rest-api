@@ -8,7 +8,7 @@ conf.sequelize.password = process.env.DB_PASSWORD;
 conf.sequelize.database = process.env.DB_NAME;
 conf.sequelize.host = process.env.DB_HOST;
 conf.sequelize.dialect = 'mysql';
-conf.sequelize.port = 3306;
+conf.sequelize.port = process.env.DB_PORT;
 conf.sequelize.define = {
     charset: 'utf8mb4',
     dialectOptions: {

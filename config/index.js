@@ -3,7 +3,7 @@
 
 // conf.environment = 'development';
 // conf.sequelize = {};
-// conf.sequelize.username = process.env.DB_USERNAME;
+// conf.sequelize.username = process.env.DB_USERNAMENAME;
 // conf.sequelize.password = process.env.DB_PASSWORD;
 // conf.sequelize.database = process.env.DB_NAME;
 // conf.sequelize.host = process.env.DB_HOST;
@@ -17,3 +17,24 @@
 // }
 // conf.ROUND_SALT = 8;
 // module.exports = conf;
+
+require("dotenv").config();
+
+module.exports = {
+    development: {
+        dialect: 'mysql',
+        host: process.env.DB_HOST,
+        port: Number(process.env.DB_PORT),
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+    },
+    production: {
+        dialect: 'mysql',
+        host: process.env.DB_HOST,
+        port: Number(process.env.DB_PORT),
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+    },
+};

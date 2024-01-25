@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install",
-    "start": "npx nodemon index.js",
-    "migrate": "npx sequelize-cli db:migrate",
-    "seed": "npx sequelize-cli db:seed:all",
-    "prestart": "npm run migrate && npm run seed"
+    "start": "npx nodemon index.js"
   },
   "author": "",
   "license": "ISC",

@@ -12,5 +12,4 @@ router.get(`/api/v1/`, (_req, res) => {
 
 router.use(pasien)
 router.use(auth)
-
 module.exports = router;
